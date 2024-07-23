@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throughput for Multiple Access Techniques</title>
+    <link rel="stylesheet" href="styles4.css">
+    <!-- Include KaTeX CSS for mathematical equations -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <h2>Throughput for Multiple Access Techniques</h2>
+            <div class="input-group">
+                <label for="bandwidth">Bandwidth:</label>
+                <input type="number" id="bandwidth" placeholder="Enter bandwidth">
+                <select id="bandwidthUnit">
+                    <option value="bps">bps</option>
+                    <option value="Kbps">Kbps</option>
+                    <option value="Mbps">Mbps</option>
+                    <option value="Gbps">Gbps</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="technique">Access Technique:</label>
+                <select id="technique">
+                    <option value="unslottedNonpersistentCSMA">Unslotted Nonpersistent CSMA</option>
+                    <option value="slottedNonpersistentCSMA">Slotted Nonpersistent CSMA</option>
+                    <option value="slotted1PersistentCSMA">Slotted 1-persistent CSMA</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="signalPropagation">Max Signal Propagation:</label>
+                <input type="number" id="signalPropagation" placeholder="Enter signal propagation time">
+                <select id="propagationUnit">
+                    <option value="s">s</option>
+                    <option value="ms">ms</option>
+                    <option value="µs">µs</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="frameSize">Frame Size:</label>
+                <input type="number" id="frameSize" placeholder="Enter frame size">
+                <select id="frameSizeUnit">
+                    <option value="bits">bits</option>
+                    <option value="Kbits">Kbits</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="frameRate">Frame Rate:</label>
+                <input type="number" id="frameRate" placeholder="Enter frame rate">
+                <select id="frameRateUnit">
+                    <option value="fps">fps</option>
+                    <option value="Kfps">Kfps</option>
+                    <option value="Mfps">Mfps</option>
+                </select>
+            </div>
+            <button onclick="calculateThroughput()">Calculate Throughput</button>
+        </div>
+        <div class="results" id="results">
+            <h2>Results</h2>
+            <div id="resultContent"></div>
+            <p class="note">Click on the units to change them</p>
+            <!-- Image placeholder -->
+            <div class="image-container">
+                <img id="resultImage" src="img4.jpg" alt="Result Image">
+            </div>
+        </div>
+    </div>
+    <script src="script4.js"></script>
+    <!-- Include KaTeX JavaScript for mathematical equations -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body);"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #17153d; /* Light pink background */
+    font-family: 'Arial', sans-serif; /* Change font family */
+    font-size: 14px; /* Change font size */
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+.calculator, .results {
+    background-color: white;
+    padding: 15px; /* Smaller padding */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 15px; /* Smaller margin */
+    font-size: 20px; /* Smaller font size */
+    font-family: 'Verdana', sans-serif; /* Change font family */
+}
+
+.input-group {
+    margin-bottom: 10px; /* Smaller margin */
+}
+
+label {
+    display: block;
+    margin-bottom: 3px; /* Smaller margin */
+    font-size: 14px; /* Smaller font size */
+    font-family: 'Courier New', Courier, monospace; /* Change font family */
+}
+
+input, select {
+    width: 100%;
+    padding: 8px; /* Smaller padding */
+    margin-bottom: 8px; /* Smaller margin */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px; /* Smaller font size */
+}
+
+button {
+    width: 100%;
+    padding: 8px; /* Smaller padding */
+    border: none;
+    border-radius: 5px;
+    background-color: #0e1537;
+    color: white;
+    cursor: pointer;
+    font-size: 14px; /* Smaller font size */
+    font-family: 'Georgia', serif; /* Change font family */
+}
+
+button:hover {
+    background-color: #a04d9f;
+}
+
+.result-item {
+    cursor: pointer;
+    position: relative;
+    font-family: 'Times New Roman', Times, serif; /* Change font family */
+    font-size: 16px; /* Change font size */
+    font-weight: bold; /* Change font weight */
+    color: #333; /* Change font color */
+}
+
+.result-value {
+    color: #a22277; /* Color for the result values */
+}
+
+.result-item:hover::after {
+    content: " (click to change units)";
+    color: #e4e4e4;
+    font-size: 10px; /* Smaller font size */
+}
+
+.image-container {
+    margin-top: 25px; /* Space between results and image */
+    text-align: center;
+}
+
+#resultImage {
+    max-width: 50%;
+    height: auto;
+}

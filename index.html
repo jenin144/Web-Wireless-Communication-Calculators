@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Communication System Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <h2>Digital Communication System Calculator</h2>
+            <div class="input-group">
+                <label for="bandwidth">Bandwidth:</label>
+                <input type="number" id="bandwidth" placeholder="Enter bandwidth">
+                <select id="bandwidthUnit">
+                    <option value="Hz">Hz</option>
+                    <option value="kHz">kHz</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="quantizerBits">Number of bits for quantizer:</label>
+                <input type="number" id="quantizerBits" placeholder="Enter number of bits">
+            </div>
+            <div class="input-group">
+                <label for="sourceEncoderRate">Source encoder rate:</label>
+                <input type="number" id="sourceEncoderRate" step="0.01" placeholder="Enter source encoder rate">
+            </div>
+            <div class="input-group">
+                <label for="channelEncoderRate">Channel encoder rate:</label>
+                <input type="number" id="channelEncoderRate" step="0.01" placeholder="Enter channel encoder rate">
+            </div>
+            <div class="input-group">
+                <label for="interleaverBits">Interleaver number of bits:</label>
+                <input type="number" id="interleaverBits" placeholder="Enter interleaver number of bits">
+            </div>
+            <button onclick="calculate()">Calculate</button>
+        </div>
+        <div class="results" id="results">
+            <h2>Results</h2>
+            <div id="resultContent"></div>
+            <p class="note">Click on the units to change them</p>
+            <!-- Image placeholder -->
+            <div class="image-container">
+                <img id="resultImage" src="img1.jpg" alt="Result Image">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

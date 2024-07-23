@@ -1,0 +1,93 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #9d638e;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+.calculator, .results {
+    background-color: #e0aed4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #9c174a;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #b3001e;
+}
+
+.result-item {
+    cursor: pointer;
+    position: relative;
+    font-family: 'Times New Roman', Times, serif; /* Change font family */
+    font-size: 16px; /* Change font size */
+    font-weight: bold; /* Change font weight */
+    color: #333; /* Change font color */
+}
+
+.result-item .answer {
+    color: #9c174a; /*  color for answers */
+}
+
+.result-item:hover::after {
+    content: " (click to change units)";
+    font-size: 12px;
+    color: #555;
+    position: absolute;
+    right: -160px;
+}
+
+.note {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+}
+.image-container {
+    margin-top: 25px; /* Space between results and image */
+    text-align: center;
+}
+
+#resultImage {
+    max-width: 80%;
+    height: auto;
+}

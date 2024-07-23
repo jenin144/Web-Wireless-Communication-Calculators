@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Path Loss and Link Margin Calculator</title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Path Loss and Link Margin Calculator</h1>
+        <div class="input-groups">
+            <div class="input-group">
+                <label for="receiveAmplifierGain">Receive Amplifier Gain (Ar):</label>
+                <input type="number" id="receiveAmplifierGain" placeholder="0">
+                <select id="receiveAmplifierGainUnit">
+                    <option value="unitless">Unitless</option>
+                    <option value="dB">dB</option>
+                    <option value="dBm">dBm</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="transmitAmplifierGain">Transmit Amplifier Gain (At):</label>
+                <input type="number" id="transmitAmplifierGain" placeholder="0">
+                <select id="transmitAmplifierGainUnit">
+                    <option value="unitless">Unitless</option>
+                    <option value="dB">dB</option>
+                    <option value="dBm">dBm</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="transmitGain">Transmit Antenna Gain (Gt):</label>
+                <input type="number" id="transmitGain" placeholder="0">
+                <select id="transmitGainUnit">
+                    <option value="unitless">Unitless</option>
+                    <option value="dB">dB</option>
+                    <option value="dBm">dBm</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="receiveGain">Receive Antenna Gain (Gr):</label>
+                <input type="number" id="receiveGain" placeholder="0">
+                <select id="receiveGainUnit">
+                    <option value="unitless">Unitless</option>
+                    <option value="dB">dB</option>
+                    <option value="dBm">dBm</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="distance">Distance (d):</label>
+                <input type="number" id="distance" placeholder="0">
+            </div>
+            <div class="input-group">
+                <label for="dataRate">Data Rate (R):</label>
+                <input type="number" id="dataRate" placeholder="0">
+                <select id="dataRateUnit">
+                    <option value="bps">bps</option>
+                    <option value="Kbps">Kbps</option>
+                    <option value="Mbps">Mbps</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="frequency">Frequency (F):</label>
+                <input type="number" id="frequency" placeholder="0">
+                <select id="frequencyUnit">
+                    <option value="Hz">Hz</option>
+                    <option value="KHz">KHz</option>
+                    <option value="MHz">MHz</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="pathLoss">Path Loss (Lp):</label>
+                <input type="number" id="pathLoss" placeholder="0">
+                <select id="pathLossUnit">
+                    <option value="unitless">Unitless</option>
+                    <option value="dB">dB</option>
+                    <option value="dBm">dBm</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="feederLoss">Feeder Loss (Lf):</label>
+                <input type="number" id="feederLoss" placeholder="0">
+                <select id="feederLossUnit">
+                    <option value="unitless">Unitless</option>
+                    <option value="dB">dB</option>
+                    <option value="dBm">dBm</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="otherLosses">Other Losses (Lo):</label>
+                <input type="number" id="otherLosses" placeholder="0">
+                <select id="otherLossesUnit">
+                    <option value="unitless">Unitless</option>
+                    <option value="dB">dB</option>
+                    <option value="dBm">dBm</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="fadeMargin">Fade Margin (Fmargin):</label>
+                <input type="number" id="fadeMargin" placeholder="0">
+                <select id="fadeMarginUnit">
+                    <option value="unitless">Unitless</option>
+                    <option value="dB">dB</option>
+                    <option value="dBm">dBm</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="noiseFigure">Noise Figure (Nf):</label>
+                <input type="number" id="noiseFigure" placeholder="0">
+                <select id="noiseFigureUnit">
+                    <option value="unitless">Unitless</option>
+                    <option value="dB">dB</option>
+                    <option value="dBm">dBm</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="noiseTemperature">Noise Temperature (Kelvin):</label>
+                <input type="number" id="noiseTemperature" placeholder="0">
+            </div>
+            <div class="input-group">
+                <label for="linkMargin">Link Margin (M):</label>
+                <input type="number" id="linkMargin" placeholder="0">
+                <select id="linkMarginUnit">
+                    <option value="unitless">Unitless</option>
+                    <option value="dB">dB</option>
+                    <option value="dBm">dBm</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="modulationType">Modulation Type:</label>
+                <select id="modulationType">
+                    <option value="8-PSK">8-PSK</option>
+                    <option value="16-PSK">16-PSK</option>
+                    <option value="BPSK">BPSK</option>
+                    <option value="QPSK">QPSK</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="bitErrorRate">Maximum Bit Error Rate (BER):</label>
+                <select id="bitErrorRate">
+                    <option value="1e-2">10^-2</option>
+                    <option value="1e-3">10^-3</option>
+                    <option value="1e-4">10^-4</option>
+                    <option value="1e-5">10^-5</option>
+                    <option value="1e-6">10^-6</option>
+                </select>
+            </div>
+        </div>
+        <button onclick="calculateLinkMargin()">Calculate</button>
+    </div>
+    <div class="results-container">
+        <div class="results" id="results">
+            <h2>Results</h2>
+            <div id="resultContent"></div>
+            <p class="note">Click on the units to change them</p>
+            <div class="image-container">
+                <img id="resultImage" src="img3.jpg" alt="Result Image">
+            </div>
+        </div>
+    </div>
+    
+    </div>
+    <script src="script3.js"></script>
+</body>
+</html>

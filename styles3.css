@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e3bce2;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1000px; /* Enlarge the container */
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #401958;
+    margin-bottom: 10px;
+}
+
+.input-groups {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5px; /* Add space between input groups */
+}
+
+.input-group {
+    flex: 0 0 calc(50% - 20px); /* Adjusted to account for margin and gap */
+    margin-bottom: 20px; /* Add space between input groups */
+    display: flex; /* Added to align items vertically */
+    align-items: center; /* Added to align items vertically */
+}
+
+.input-group label {
+    flex: 0 0 30%; /* Adjust label width */
+    text-align: right; /* Align label text to the right */
+    font-size: 12px;
+    margin-right: 10px; /* Add some space between label and input */
+    color: #401958;
+}
+
+.input-group input[type="number"],
+.input-group select {
+    flex: 1 1 auto; /* Take remaining space */
+    padding: 10px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #401958;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #a04d9f;
+}
+
+.results {
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: inline-block; /* Ensures it wraps around the content */
+    text-align: left; /* Align content inside results as needed */
+}
+
+
+h2 {
+    font-size: 16px;
+    color: #401958;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.note {
+    font-size: 10px;
+    text-align: center;
+    color: #401958;
+}
+
+.result-item {
+    cursor: pointer;
+    position: relative;
+}
+
+.result-value {
+    color: #401958;
+}
+
+.result-item:hover::after {
+    content: " (click to change units)";
+    color: #cd0dcd;
+    font-size: 10px;
+}
+.results-container {
+    max-width: 800px; /* Adjust as needed */
+    margin: 20px auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #e3bce2;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.image-container {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#resultImage {
+    max-width: 50%;
+    height: 10%;
+    border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+    .input-group {
+        flex: 1 1 100%;
+        margin-right: 0;
+    }
+    
+    .input-group label {
+        width: 100%;
+        text-align: left; /* Adjust label alignment for mobile */
+        margin-right: 0;
+        margin-bottom: 5px; /* Add some space below label for mobile */
+    }
+}

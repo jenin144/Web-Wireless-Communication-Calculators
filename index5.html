@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design of Cellular System</title>
+    <link rel="stylesheet" href="styles5.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Design of Cellular System</h1>
+        <form id="cellularForm" onsubmit="calculateCellularSystemDesign(); return false;">
+            <div>
+                <label for="slotsPerCarrier">Slots per Carrier</label>
+                <input type="number" id="slotsPerCarrier" required>
+            </div>
+            <div>
+                <label for="cityArea">Area of the City (Km<sup>2</sup>)</label>
+                <input type="number" id="cityArea" required>
+            </div>
+            <div>
+                <label for="numUsers">Number of Users</label>
+                <input type="number" id="numUsers" required>
+            </div>
+            <div>
+                <label for="avgCallPerDay">Average Call per Day (calls/day)</label>
+                <input type="number" id="avgCallPerDay" required>
+            </div>
+            <div>
+                <label for="avgCallDuration">Average Call Duration</label>
+                <input type="number" id="avgCallDuration" required>
+                <select id="avgCallDurationUnit">
+                    <option value="seconds">Seconds</option>
+                    <option value="minutes">Minutes</option>
+                    <option value="hours">Hours</option>
+                </select>
+            </div>
+            <div>
+                <label for="probCallDropped">Probability of Call Dropped (Erlang)</label>
+                <input type="number" id="probCallDropped" step="0.01" required>
+            </div>
+            <div>
+                <label for="minSIR">Minimum SIR Needed (dB/dBm/Watt)</label>
+                <input type="number" id="minSIR" required>
+                <select id="minSIRUnit">
+                    <option value="dB">dB</option>
+                    <option value="dBm">dBm</option>
+                    <option value="Watt">Watt</option>
+                </select>
+            </div>
+            <div>
+                <label for="powerAtRefDistance">Power at Reference Distance</label>
+                <input type="number" id="powerAtRefDistance" required>
+                <select id="powerAtRefDistanceUnit">
+                    <option value="dB">dB</option>
+                    <option value="dBm">dBm</option>
+                    <option value="Watt">Watt</option>
+                </select>
+            </div>
+            <div>
+                <label for="refDistance">Reference Distance</label>
+                <input type="number" id="refDistance" required>
+                <select id="refDistanceUnit">
+                    <option value="meters">Meters</option>
+                    <option value="km">Kilometers</option>
+                    <option value="cm">Centimeters</option>
+                </select>
+            </div>
+            <div>
+                <label for="pathLossComponent">Path Loss Component</label>
+                <input type="number" id="pathLossComponent" required>
+            </div>
+            <div>
+                <label for="receiverSensitivity">Receiver Sensitivity</label>
+                <input type="number" id="receiverSensitivity" required>
+                <select id="receiverSensitivityUnit">
+                    <option value="dB">dB</option>
+                    <option value="dBm">dBm</option>
+                    <option value="Watt">Watt</option>
+                    <option value="uW">uW</option>
+                    <option value="mW">mW</option>
+                </select>
+            </div>
+            <button type="submit" id="calculateBtn">Calculate</button>
+        </form>
+        <div class="result" id="result"></div>
+    </div>
+    <script src="script5.js"></script>
+</body>
+</html>
